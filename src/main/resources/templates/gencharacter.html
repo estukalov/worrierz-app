@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Worriers</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<h2 th:text="${character.fullName}" />
+Kit name: <span th:text="${character.prefixName}" />Kit<br/>
+Apprentice name: <span th:text="${character.prefixName}" />Paw<br/>
+Leader name: <span th:text="${character.prefixName}" />Star<br/>
+
+<br/>
+Clan: <span th:text="${character.clan}" /><br/>
+<br/>
+<span th:text="${character.fullName}" /> is known as a true clan worrier of <span th:text="${character.clan}" />, definitely not a kittyPet.<br/>
+<span th:text="${character.fullName}" /> once lost <span th:text="${character.lostItem}" /> in a battle with <span th:text="${character.opponentClan}" />.<br/>
+Fellow clan cats always valued <span th:text="${character.fullName}" /> for being very <span th:text="${character.adjective}" />.<br/>
+
+<br/><br/>
+<form action="/gencharacter" method="get">
+    <button type="submit" formaction="/gencharacter">
+        Generate a new character
+    </button>
+</form>
+</body>
